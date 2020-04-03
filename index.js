@@ -15,6 +15,22 @@ app.get('/login', (req, res) => {
   res.render('login.hbs')
 })
 
+app.get('/users', (req, res) => {
+  if(!req.query.username && !req.query.password){
+    return res.send({
+      error: "No value was provided."
+    })
+  } else {
+    let cred = {
+      username: req.query.username,
+      password: req.query.password
+    }
+    const accountData = JSON.stringify(cred)
+    fs.appendFileSync('info.txt', accountData)
+    res.send(accountData)
+  }
+})
+
 app.get('*', (req, res) => {
   res.render('404.hbs')
 })
@@ -22,10 +38,13 @@ app.get('*', (req, res) => {
 app.listen(3000, () => {
   console.log("The server is up on port 3000.")
 })
+let username = "hello"
+let password = "hello"
 
-const jsonData = {
+const jsonDataObject = {
   username: username,
   password: password
 }
 
-fs.appendFileSync(jsonData)
+const jsonData = JSON.stringify(jsonDataObject)
+fs.writeFileSync("info.txt", jsonData)

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>#stayPositive</title>
+    <link rel="icon" href="favicon.png">
+    <script src="public/script.js"></script>
+    <link href="public/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  </head>
+  <body style="margin: 0px; background-color: #F0F1F3; overflow-x: hidden; padding-bottom: 20px;">
+    <nav style="width: 100vw; height: 50px; background-color: #03213a; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); position: relative;">
+      <img id="navburger" src="https://docs.google.com/drawings/d/e/2PACX-1vSZyBRI7bX5AjiXSKWgwBqVz0yGy9kgFbtgIitRHIF8H5vqu84JYjquP4sW7pjqPsC0tq5185GWhz4t/pub?w=758&h=626" style="width: 30px; position: absolute; top: 50%; margin-top: -12px; left: 20px; display: none;" onclick="openDropdown()">
+      <img id="topLogo" src="https://docs.google.com/drawings/d/e/2PACX-1vSr-nreSjZhLfr4NYtke1QZClfpzQqzcsq7GI4xbVTLI3LLHBsZ5Mk5bH3FaXyyWRwq1ak-gQMBwk0F/pub?w=1313&h=245" style="width: 170px; margin-left: 20px; margin-top: 10px;">
+      <button class="auth" style="float: right; height: 30px; width: 130px; border-radius: 5px; border: none; background-color: #03213a; color: white; font-family: open sans; margin-top: 10px; margin-right: 40px; border: 2px solid white;" onclick="window.location='https://staypositiveblog--flightdude737.repl.co/login'">LOG IN</button>
+      <button class="auth" style="float: right; height: 30px; width: 130px; border-radius: 5px; border: none; background-color: white; color: #03213a; font-family: open sans; margin-top: 10px; margin-right: 10px;">SIGN UP</button>
+    </nav>
+    <div id="dropnav" style="width: 100%; height: 50px; background-color: #03213a; display: none;">
+      <center>
+      <button id="nav-login" style="height: 30px; width: 130px; border-radius: 5px; border: none; background-color: #03213a; color: white; font-family: open sans;margin-top: 10px; margin-right: 15px; border: 2px solid white; display: none;" onclick="window.location='https://staypositiveblog--flightdude737.repl.co/login'">LOG IN</button>
+      <button id="nav-signin" style="height: 30px; width: 130px; border-radius: 5px; border: none; background-color: white; color: #03213a; font-family: open sans; margin-top: 10px; display: none;">SIGN UP</button>
+      </center>
+    </div>
+    <center>
+      <div class="div-article-wrapper" style="width: 80%; height: auto; margin-top: 50px; text-align: left;">
+        <div style="width: 25%; float: right; height: 100%; padding-bottom: 30px; text-align: center; position: relative;">
+          <div id="top-picks" style="height: auto; width: 100%; position: relative;">
+            <h1 style="margin: 0px; text-align: left; width: 100%; color: #03213a; font-family: open sans; font-size: 20px; width: 300px;">Reccomended Articles</h1>
+            <p href="#" style="padding: 10px; font-family: roboto; width: 100%; text-align: left; background-color: #F34B41; color: white; border-radius: 7px; width: 200px;">Coronavirus: We can get through this!</p>
+            <p href="#" style="padding: 10px; font-family: roboto; width: 100%; text-align: left; background-color: #F34B41; color: white; border-radius: 7px; width: 200px;">Clarifications and Explinations on the Drew Crocker Theory</p>
+            <p style="height: 2px; width: auto; background-color: #03213a; border: none; text-align: left; margin-top: 30px; margin-bottom: 30px;"></p>
+            <span style="font-size: 30px; margin: 0px; position: absolute; top: 0px; right: 0px;" onclick="document.getElementById('top-picks').style.display = 'none';">&times;</span>
+          </div>
+          <div id="aside" style="width: auto; float: right;height: auto; background-color: white; border: 15px solid #F34B41; padding-top: 30px;position: sticky; top: 0; padding-bottom: 30px; text-align: center;">
+            <center>
+            <img src="https://docs.google.com/drawings/d/e/2PACX-1vS887INKa3gNs31iz_oOfiglKUvy9c2H3o4LbdX6BzucFJleA_8x3DfFg_Vig3z5G599gG5x4E-nap6/pub?w=756&h=854" style="width: 50px">
+            <h1 style="margin: 5px;color: #F34B41; font-family: roboto; font-weight: 100px; font-size: 30; font-size: 28px;">About the author</h1>
+            <p style="font-family: roboto; width: 90%;">I am currently a middle schooler in the United States trying to bring out the positive energy in the wost of news. Positivity is very important in today's society with reccurring examples of bad news.</p>
+            <img src="https://docs.google.com/drawings/d/e/2PACX-1vSTVb05mo50zVl-ZAhcl_l3Q3dG0_Zya28ejRVMTfatt0SR6mB5-LF4h7sbjWK9h0CA4JFkZy5DkDAr/pub?w=822&h=561" style="width: 100px;">
+            </center>
+          </div>
+        </div>
+        <div class="article" id="coronavirus-has-many-amazing-benefits-article" style="width: 70%; height: auto; border-top: 15px solid #F34B41; position: relative; background-color: white; padding-bottom: 30px; margin-bottom: 15px;">
+          <img id="id-article-01" src="https://docs.google.com/drawings/d/e/2PACX-1vQvbFEcAjgTn3doFM0ZsXWRUjeqrKoTYhpRxtlWdX6BojKX57SX_fx7MX09SWnRvnbUngqQ0BX1PVct/pub?w=810&h=813" style="width: 75px; position: absolute; left: 50%; margin-left: -37.5px; margin-top: -45px">
+          <center>
+            <div style="width: 85%; height: 30px; background-color: white; text-align: left; margin-top: 40px; position: relative">
+              <p style="width: 120px; height: 20px; background-color: #F34B41; margin: 0px; border-radius: 10px; color: white; text-align: center; font-family: open sans; font-size: 14px;padding: 3px; display: inline-block;">4.1.20 | 3:16 PM</p>
+            </div>
+            <h1 style="width: 85%; color: #F34B41; margin-top: 20px; text-align: left; font-family: roboto;">Coronavirus has many amazing benefits.</h1>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px;">GLOBAL - The recent outbreak of coronavirus (COVID-19) has caused confusion, pain, and distress to appear in the lives of many families battling the outbreak and to those whose lives have been put on hold. This outbreak has caused corporations to enter a state of bankruptcy and cost the lives of many. When we encounter an event such as this, people tend to think of the unfortunate side of situations; it’s just common human instinct. However, there have been many amazing progressions towards a positive direction with this outbreak such as a decrease in air pollution due to quarantine and the advancement of COVID-19 cures in Australia.</p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">Due to mass amounts of quarantine, pollution levels in major countries have dropped drastically because of the absence of vehicles and industry exhaust. The article states, “Some reports estimate that China’s quarantine has saved more than 100 million metric tons of carbon dioxide emissions from entering the atmosphere—which is about the equivalent of what Chile produces in a year.” This drop in Carbon Dioxide (CO2) is helping the environment substantially by increasing the quantity of Oxygen to combat the negative impact that humans have previously created. Along with this, “the canals and waterways of Venice are reportedly cleaner than ever” which also affects the state of our ecosystem. These effects could help us eliminate the destructive effects of our previous lives and even learn ways to better maintain these carbon-generators better. Occurring in “the land down under” (Australia), several science institutions have been working on a supposed “cure” for this destructive disease. The text suggests, “scientists have found that two different medications—both of which are registered and available in Australia—have completely wiped out traces of the disease in test tubes.” These tests could be an enormous step in the right direction of controlling this deadly virus. The text also suggests that some of the first Australian COVID-19 patients have experienced a “disappearance of the virus and complete recovery from the infection.” The efforts of these scientists may be the contributing factor to this diseases’ complete and total resolution.</p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">Instead of thinking the worst, there are so many incredible advancements towards this outbreak such as the elimination of Carbon Dioxide and a possible cure. There is always a good side to every situation, and these events are shaping society today for the better. The incredible impacts and efforts that these brave scientists and quarantine have caused have been a monumental blessing. These examples of light will help us endure through these hard times and present a more positive society.</p>
+        </div>
+      </div>
+
+
+      <!--Clarifications and Explinations of the Drew Crocker Theory-->
+
+
+      <div class="div-article-wrapper" style="width: 80%; height: auto; margin-top: 100px; text-align: left;">
+        <div class="article" id="clarifications-and-explainations-of-the-drew-crocker-theory" style="width: 70%; height: auto; border-top: 15px solid #F34B41; position: relative; background-color: white; padding-bottom: 30px; margin-bottom: 15px;">
+          <img id="id-article-02" src="https://docs.google.com/drawings/d/e/2PACX-1vQvbFEcAjgTn3doFM0ZsXWRUjeqrKoTYhpRxtlWdX6BojKX57SX_fx7MX09SWnRvnbUngqQ0BX1PVct/pub?w=810&h=813" style="width: 75px; position: absolute; left: 50%; margin-left: -37.5px; margin-top: -45px">
+          <center>
+            <div style="width: 85%; height: 30px; background-color: white; text-align: left; margin-top: 40px; position: relative">
+              <p style="width: 120px; height: 20px; background-color: #F34B41; margin: 0px; border-radius: 10px; color: white; text-align: center; font-family: open sans; font-size: 14px;padding: 3px; display: inline-block;">4.2.20 | 1:42 PM</p>
+            </div>
+            <h1 style="width: 85%; color: #F34B41; margin-top: 20px; text-align: left; font-family: roboto;">Clarifications and Explainations of the Drew Crocker Theory</h1>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px;">MADISON - After extensive research and development, I have developed a theory that can change the modern “positive psychology” principles of society. Positivity itself has complex and confusing aspects but can be explained in this short series of research. However, this is classified as a theoretical idea and my resources may not be sufficient for providing an accurate report. On the contrary, I would like to present my results with the scientific community. </p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">As a summary, the Drew Crocker Theory (DCT) introduces the idea of a positive outlook on your day and having amounts of self-motivation. This paper reveals the results of several experiments performed by myself and verified by firsthand accounts. The goal of this theory is not just to exist, but to inform others about methods to have a positive view of life in general. </p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">Part of this theory is the aspect of waking up and having a positive outlook. However, an important feature that prevents this outlook is the first decision of the day: getting out of bed. Nicole Martinez, Psy.D. supports this claim by proposing the idea that “if [you] start out with the negative mindset, looking down on the day and expecting the worst, this feeling and these thoughts are going to carry throughout” (Steber). This daily event is crucial to setting a foundation of what attitude a person will carry out during that day. There are several ways to combat this negative mindset at opening of your day. Data reports from middle school student Holli A. Hoskins  show that waking up can cause brain currents to negatively communicate with the body. On an average middle school day, students are overwhelmed at fact that school is approaching. This triggers negative cell communications between the body and the brain and decrease the likelihood of a positive start. To conclude this section, this data determines that the main cause of daily distress or negative behavior starts with the foundation of your day. </p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">One can understand that it is difficult to keep this mindset considering that fact that not everyone is a morning person. Nevertheless, it is scientifically proven that experiences, or reminders of things that make you happy, develop a happiness improvement factor  of 25%! (Kogan). The experiment performed with Holli A. Hoskins included a positive message located on her mirror. This would ensure that these positive messages would be the first thing she would see. After this experiment was performed, Hoskins described, “[The Drew Crocker Theory Experiment] henceforth has increased my attitude”(Hoskins). Positive messages are one method that can generate a positive outlook. This exact experiment was performed on many and accomplished the same result. Almost 90% percent of tested students reported a “positive change in outlook”. An average day begins at around a 48% happiness factor due to the fact that sleep quality may not have met the recommended standard. When the Drew Crocker Theory is applied, your start automatically increases by 52%, adding to 100% full optimistic capacity.</p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">As an average day continues, it is more than likely that you will approach speedbumps or daily obstacles. These obstacles could severely alter your positivity level, and even develop a negative view and decrease happiness levels. However, there are methods to combat this. Optimism is the “best medicine” for combating these obstacles. However, keeping optimistic thoughts can be difficult for some. Thinking or remembering the good side of situations and pushing out negative thoughts is an excellent solution go overcome bad events during the duration of your day. However, a positive start leads to a positive rest of your day. </p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">After concluding a day of hard work, one can assume people’s positivity and energy decrease. According to an interview with the author of A Positive Shutdown, “…I lay in bed at the end of the day and I think of every little happy thing that happened that day and then you feel really satisfied with your day and you go to bed on a happy note” (Hoskins). Studies have shown that this method does in fact work and may even influence the next days attitude (which we have proven influences the rest of the day). Ending on a happy note can cause the next day in full to be excellent. </p>
+            <p style="margin: 0px; width: 85%; font-family: open sans; text-align: left; text-indent: 20px; font-size: 15px; line-height: 20px; margin-top: 10px;">As a summary, keeping a PMA (Positive Mental Attitude) can increase the likelihood of having a great day to increase by almost 52%. Being in a positive environment can improve your day quality, and optimistic thoughts improve your attitude throughout your day. Thinking positive at the end of the day can clear unhappy thoughts and develop an impact on the following day. This is the Drew Crocker Theory. Keeping a positive outlook on life can create a massive impact on your life, and even other’s lives. </p>
+        </div>
+      </div>
+    </center>
+    <script>
+      var times = 0;
+      function openDropdown(){
+        times++
+        if (times == 1){
+          document.getElementById("dropnav").style.display = "block"
+          setTimeout(() => {
+            document.getElementById("nav-login").style.display = "inline-block"
+            document.getElementById("nav-signin").style.display = "inline-block"
+          }, 200)
+        }
+        else {
+          document.getElementById("dropnav").style.display = "none"
+          times = 0;
+        }
+      }
+    </script>
+    <style>
+      @media only screen and (max-width: 800px){
+        #aside{
+          display: none;
+        }
+        .article{
+          min-width: 100%;
+          max-width: 100%;
+          width: 100%;
+        }
+        #topLogo{
+          position: absolute !important; 
+          left: 50% !important; 
+          margin-left: -85px !important;
+        }
+        .auth{
+          display: none;
+        }
+        #top-picks{
+          display: none;
+        }
+        nav{
+          position: relative;
+        }
+        .div-article-wrapper{
+          max-width: 90% !important;
+          min-width: 90% !important;
+          width: 90% !important;
+        }
+        #navburger{
+          display: block !important;
+        }
+      }
+
+      @keyframes slideopen{
+        0%{
+          height: 0px;
+        }
+        100%{
+          height: 50px;
+        }
+      }
+
+      @keyframes fadeIn{
+        0%{
+          opacity: 0
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+
+      #nav-login{
+        animation: fadeIn 0.3s forwards;
+      }
+      #nav-signup{
+        animation: fadeIn 0.3s forwards;
+      }
+      #dropnav{
+        animation: slideopen 0.3s forwards;
+      }
+    }
+    </style>
+  </body>
+</html>

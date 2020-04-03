@@ -8,18 +8,85 @@
     <script src="public/script.js"></script>
     <link href="public/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <style>
+      @media only screen and (max-width: 800px){
+        #aside{
+          display: none;
+        }
+        .article{
+          min-width: 100%;
+          max-width: 100%;
+          width: 100%;
+        }
+        #topLogo{
+          position: absolute !important; 
+          left: 50% !important; 
+          margin-left: -85px !important;
+        }
+        .auth{
+          display: none;
+        }
+        #top-picks{
+          display: none;
+        }
+        nav{
+          position: relative;
+        }
+        .div-article-wrapper{
+          max-width: 90% !important;
+          min-width: 90% !important;
+          width: 90% !important;
+        }
+        #navburger{
+          display: block !important;
+        }
+        #userId{
+          display: none;
+        }
+      }
+
+      @keyframes slideopen{
+        0%{
+          height: 0px;
+        }
+        100%{
+          height: 50px;
+        }
+      }
+
+      @keyframes fadeIn{
+        0%{
+          opacity: 0
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+
+      #nav-login{
+        animation: fadeIn 0.3s forwards;
+      }
+      #nav-signup{
+        animation: fadeIn 0.3s forwards;
+      }
+      #dropnav{
+        animation: slideopen 0.3s forwards;
+      }
+    }
+    </style>
   </head>
   <body style="margin: 0px; background-color: #F0F1F3; overflow-x: hidden; padding-bottom: 20px;">
     <nav style="width: 100vw; height: 50px; background-color: #03213a; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); position: relative;">
       <img id="navburger" src="https://docs.google.com/drawings/d/e/2PACX-1vSZyBRI7bX5AjiXSKWgwBqVz0yGy9kgFbtgIitRHIF8H5vqu84JYjquP4sW7pjqPsC0tq5185GWhz4t/pub?w=758&h=626" style="width: 30px; position: absolute; top: 50%; margin-top: -12px; left: 20px; display: none;" onclick="openDropdown()">
       <img id="topLogo" src="https://docs.google.com/drawings/d/e/2PACX-1vSr-nreSjZhLfr4NYtke1QZClfpzQqzcsq7GI4xbVTLI3LLHBsZ5Mk5bH3FaXyyWRwq1ak-gQMBwk0F/pub?w=1313&h=245" style="width: 170px; margin-left: 20px; margin-top: 10px;">
       <button class="auth" style="float: right; height: 30px; width: 130px; border-radius: 5px; border: none; background-color: #03213a; color: white; font-family: open sans; margin-top: 10px; margin-right: 40px; border: 2px solid white;" onclick="window.location='https://staypositiveblog--flightdude737.repl.co/login'">LOG IN</button>
-      <button class="auth" style="float: right; height: 30px; width: 130px; border-radius: 5px; border: none; background-color: white; color: #03213a; font-family: open sans; margin-top: 10px; margin-right: 10px;">SIGN UP</button>
+      <button class="auth" style="float: right; height: 30px; width: 130px; border-radius: 5px; border: none; background-color: white; color: #03213a; font-family: open sans; margin-top: 10px; margin-right: 10px;" onclick="window.location='https://staypositiveblog--flightdude737.repl.co/sign-up'">SIGN UP</button>
+      <p id="userId" style="color: white; font-family: open sans; position: absolute; top: 0px; margin-top: 13px; right: 350px;">Welcome, {{ username }}!</p>
     </nav>
     <div id="dropnav" style="width: 100%; height: 50px; background-color: #03213a; display: none;">
       <center>
       <button id="nav-login" style="height: 30px; width: 130px; border-radius: 5px; border: none; background-color: #03213a; color: white; font-family: open sans;margin-top: 10px; margin-right: 15px; border: 2px solid white; display: none;" onclick="window.location='https://staypositiveblog--flightdude737.repl.co/login'">LOG IN</button>
-      <button id="nav-signin" style="height: 30px; width: 130px; border-radius: 5px; border: none; background-color: white; color: #03213a; font-family: open sans; margin-top: 10px; display: none;">SIGN UP</button>
+      <button id="nav-signin" style="height: 30px; width: 130px; border-radius: 5px; border: none; background-color: white; color: #03213a; font-family: open sans; margin-top: 10px; display: none;" onclick="window.location='https://staypositiveblog--flightdude737.repl.co/sign-up'">SIGN UP</button>
       </center>
     </div>
     <center>
@@ -93,68 +160,5 @@
         }
       }
     </script>
-    <style>
-      @media only screen and (max-width: 800px){
-        #aside{
-          display: none;
-        }
-        .article{
-          min-width: 100%;
-          max-width: 100%;
-          width: 100%;
-        }
-        #topLogo{
-          position: absolute !important; 
-          left: 50% !important; 
-          margin-left: -85px !important;
-        }
-        .auth{
-          display: none;
-        }
-        #top-picks{
-          display: none;
-        }
-        nav{
-          position: relative;
-        }
-        .div-article-wrapper{
-          max-width: 90% !important;
-          min-width: 90% !important;
-          width: 90% !important;
-        }
-        #navburger{
-          display: block !important;
-        }
-      }
-
-      @keyframes slideopen{
-        0%{
-          height: 0px;
-        }
-        100%{
-          height: 50px;
-        }
-      }
-
-      @keyframes fadeIn{
-        0%{
-          opacity: 0
-        }
-        100%{
-          opacity: 1;
-        }
-      }
-
-      #nav-login{
-        animation: fadeIn 0.3s forwards;
-      }
-      #nav-signup{
-        animation: fadeIn 0.3s forwards;
-      }
-      #dropnav{
-        animation: slideopen 0.3s forwards;
-      }
-    }
-    </style>
   </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>#stayPositive | Sign Up</title>
+  </head>
+  <body>
+    <center>
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vRMHAqfwhDx_8zDlQ5fqq1DhyK-ihtoMOWMXS5EwrEz-Oh0EitbKACRjHofNXjoiMa6UTcs1DtOiF29/pub?w=1313&h=245" style="width: 270px; margin-top: 20px;">
+      <h1 style="font-family: open sans; color: #03213a; margin-bottom: 0px;">Sign Up</h1>
+      <p style="font-family: roboto; font-weight: 300; margin-top: 10px;">Create a new #stayPositive account!</p>
+      <div style="width: 300px; height: 5px; background-color: #03213a; margin-bottom: 20px;"></div>
+      <div style="max-width: 500px; border: 2px solid #DFE1E1; height: auto; padding-bottom: 40px; margin: 15px;">
+        <button style="width: 85%; height: 40px; background-color: #03213a; border-radius: 25px; border: 2px solid ; color: white; font-family: roboto; margin-top: 40px; outline: none">Sign Up with Social Providers</button>
+        <p style="font-family: roboto;">- OR -</p>
+        <p style="width: 85%; font-family: sans-serif; color: #03213a; text-align: left; margin-bottom: 8px; font-size: 15px;">First Name</p>
+        <input id="first-name" type="text" style="border: 2px solid #03213a; width: 85%; height: 30px; border-radius: 4px; margin-top: 0px; margin-bottom: 10px; padding-left: 10px;">
+        <p style="width: 85%; font-family: sans-serif; color: #03213a; text-align: left; margin-bottom: 8px;">Last Name</p>
+        <input id="last-name" type="text" style="border: 2px solid #03213a; width: 85%; height: 30px; border-radius: 4px; margin-top: 0px; padding-left: 10px;">
+        <p style="width: 85%; font-family: sans-serif; color: #03213a; text-align: left; margin-bottom: 8px;">Email</p>
+        <input id="email" type="email" style="border: 2px solid #03213a; width: 85%; height: 30px; border-radius: 4px; margin-top: 0px; padding-left: 10px;">
+        <p style="width: 85%; font-family: sans-serif; color: #03213a; text-align: left; margin-bottom: 8px;">Username</p>
+        <input id="username" type="mail" style="border: 2px solid #03213a; width: 85%; height: 30px; border-radius: 4px; margin-top: 0px; padding-left: 10px;">
+        <p style="width: 85%; font-family: sans-serif; color: #03213a; text-align: left; margin-bottom: 8px;">Password</p>
+        <input id="password" type="password" style="border: 2px solid #03213a; width: 85%; height: 30px; border-radius: 4px; margin-top: 0px; padding-left: 10px; letter-spacing: 4px">
+        <button style="width: 85%; height: 40px; background-color: #F34B41; border-radius: 25px; border: none; color: white; font-family: roboto; margin-top: 40px; outline: none;" onclick="createAccount(document.getElementById('first-name').value, document.getElementById('last-name').value, document.getElementById('email').value, document.getElementById('username').value, document.getElementById('password').value)">Sign Up!</button>
+      </div>
+    </center>
+    <script>
+      function createAccount(firstName, lastName, email, username, password){
+        window.location = "https://staypositiveblog--flightdude737.repl.co/users?username=" + username + "&password=" + password;
+      }
+    </script>
+  </body>
+</html>

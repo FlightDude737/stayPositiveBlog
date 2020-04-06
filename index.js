@@ -2,7 +2,6 @@ const fs = require("fs")
 const express = require("express")
 const request = require("request")
 
-let passwordHash = ""
 let usernameSet = "User"
 const dataBuffer = fs.readFileSync("info.json")
 
@@ -30,7 +29,33 @@ app.get('/login/authenticate', (req, res) => {
   if (!req.query.username || !req.query.password) {
     res.send("There is no username or password. Please input your credidentials.")
   } else {
-    console.log(req.query.password)
+    var url = 'https://api.hashify.net/hash/sha512/hex?value=' + req.query.password
+    request( { url, json: true }, function (error, response) { 
+      if ( error ) {
+        console.log(error)
+      } else {
+        let passwordHashLogin = response.body.Digest
+        console.log(passwordHashLogin)
+        const dataBuffer = fs.readFileSync('info.json')
+        const dataJSON = dataBuffer.toString()
+        const info = JSON.parse(dataJSON)
+        console.log(info)
+        info.forEach((data) => {
+          if (data.username == req.query.username) {
+            console.log(data.username)
+            if (data.password == passwordHashLogin) {
+              res.render('index.hbs', {
+                username: req.query.username
+              })
+            } else {
+              console.log("no match password")
+            }
+          } else {
+            console.log('no username')
+          }
+        })
+      }
+    })
   }
 })
 
@@ -47,29 +72,25 @@ app.get('/users', (req, res) => {
     var url = 'https://api.hashify.net/hash/sha512/hex?value=' + req.query.password
     request( { url, json: true }, function (error, response) { 
       if ( error ) {
-        console.log(error)
+        res.send(error)
+      } else {
+        let passwordHash = response.body.Digest
+        try{
+          const dataBuffer = fs.readFileSync('info.json')
+          const dataJSON = dataBuffer.toString()
+          const info = JSON.parse(dataJSON)
+          info.push({
+            username: req.query.username,
+            password: passwordHash
+          })
+          const finalData = JSON.stringify(info)
+          fs.writeFileSync('info.json', finalData)
+        } catch (e) {
+            console.log(e)
+        }
       }
-      passwordHash = response.body.Digest
     })
-
-    try{
-        const dataBuffer = fs.readFileSync('info.json')
-        const dataJSON = dataBuffer.toString()
-        const info = JSON.parse(dataJSON)
-        info.push({
-          username: req.query.username,
-          password: passwordHash
-        })
-        const finalData = JSON.stringify(info)
-        fs.writeFileSync('info.json', finalData)
-    } catch (e) {
-        return []
-    }
-
-    
-    usernameSet = req.query.username
-    res.send("<html><script>window.location = 'https://staypositiveblog--flightdude737.repl.co/';</script></html>")
-    console.log(JSON.parse(fs.readFileSync('info.json')))
+    res.send("<html><script>window.location = 'https://staypositiveblog--flightdude737.repl.co/login';</script></html>")
   }
 })
 
